@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <button onClick={() => dispatch(thunk("youtube"))}>Fetch</button>
+      <button onClick={() => dispatch(asyncThunk("youtube"))}>Fetch</button>
     </>
   );
 };
