@@ -3,3 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+header {
+  .header {
+    .header-nav {
+      display: flex;
+      justify-content: flex-end;
+      .profile-image {
+        height: 35px;
+      }
+      .menu {
+        height: 35px;
+        width: 35px;
+      }
+    }
+  }
+}

@@ -8,12 +8,12 @@ import axios from "axios";
 const log = createLogger();
 const initialState: initialStateType = {
   loading: true,
-  data: {},
+  data: [],
   error: "",
 };
 type initialStateType = {
   loading: boolean;
-  data: {};
+  data: [];
   error: string;
 };
 const fetcherSlice = createSlice({
@@ -47,4 +47,3 @@ export const store = configureStore({
   },
   middleware: (def) => def().concat(log),
 });
-store.subscribe(() => console.log(store.getState()));
