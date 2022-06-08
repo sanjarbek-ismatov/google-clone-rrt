@@ -1,6 +1,8 @@
 # google-clone-rrt
 Google cloned with Google search api. Used technologies: React, Redux, Typescript.
 # USED: 
+- HTML
+- Sass
 - React
 - Typescript
 - React Router
