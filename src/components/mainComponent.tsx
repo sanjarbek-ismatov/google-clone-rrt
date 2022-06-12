@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { asyncThunk } from "../state/fetcher";
 import "../styles/main.scss";
 const MainComponent = () => {
+  const dispatch: any = useDispatch();
   const clear = () => {
     return (
       <i
@@ -41,8 +44,9 @@ const MainComponent = () => {
                 setText(e.target.value);
               }}
               onKeyPress={(e) => {
-                if (e.key === "Enter") {
-                  navigate("/search");
+                if (e.key === "Enter" && text) {
+                  navigate("/result");
+                  dispatch(asyncThunk(text));
                 }
               }}
             />

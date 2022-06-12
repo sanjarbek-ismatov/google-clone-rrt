@@ -4,15 +4,14 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./state/fetcher";
-import MainComponent from "./components/mainComponent";
+import SearchResult from "./components/searchResult";
 ReactDOM.createRoot(document.getElementsByClassName("main")[0]!).render(
-  <BrowserRouter>
-    <Routes>
-      {/* <Route path="main" element={<MainComponent />} />
-      <Route path="*" element /> */}
-    </Routes>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/result" element={<SearchResult />} />
+        <Route path="/" element={<App />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>
 );
