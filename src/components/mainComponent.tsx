@@ -47,6 +47,7 @@ const MainComponent = () => {
                 if (e.key === "Enter" && text) {
                   navigate("/result");
                   dispatch(asyncThunk(text));
+                  localStorage.setItem("data", text);
                 }
               }}
             />
