@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { asyncThunk } from "../state/fetcher";
 type result = {
@@ -22,7 +23,12 @@ type result = {
 const SearchResult = () => {
   const state = useSelector((state: result) => state.fetcher);
   const dispatch: any = useDispatch();
-
+  const navigate = useNavigate();
+  window.onload = () => {
+    if (state.data.data.items === undefined) {
+      navigate("/");
+    }
+  };
   useEffect(() => {
     dispatch(asyncThunk(localStorage.getItem("data") || ""));
   }, []);
