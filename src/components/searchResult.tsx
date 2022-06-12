@@ -25,12 +25,14 @@ const SearchResult = () => {
   const dispatch: any = useDispatch();
   const navigate = useNavigate();
   window.onload = () => {
-    navigate("/");
+    if (state.data.data.items === undefined) {
+      navigate("/");
+    }
   };
   useEffect(() => {
     dispatch(asyncThunk(localStorage.getItem("data") || ""));
   }, []);
-  console.log(state);
+
   return (
     <div>
       {state &&
