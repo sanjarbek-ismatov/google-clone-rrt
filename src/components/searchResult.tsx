@@ -25,9 +25,7 @@ const SearchResult = () => {
   const dispatch: any = useDispatch();
   const navigate = useNavigate();
   window.onload = () => {
-    if (state.data.data.items === undefined) {
-      navigate("/");
-    }
+    navigate("/");
   };
   useEffect(() => {
     dispatch(asyncThunk(localStorage.getItem("data") || ""));
