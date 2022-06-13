@@ -37,7 +37,7 @@ const fetcherSlice = createSlice({
 });
 export const asyncThunk = createAsyncThunk("fetch", async (query: string) => {
   const data = await axios.get(
-    `https://www.googleapis.com/customsearch/v1?key=AIzaSyBbFGoK91L85xUu9ONymejA1ecQPAVN8gM&cx=344518b235096fb90&q=${query}`
+    `https://www.googleapis.com/customsearch/v1?key=AIzaSyBYovFOhZo8f17ldEHUYKd4BYT6Ez_KEbE&cx=344518b235096fb90&q=${query}`
   );
   return data;
 });
