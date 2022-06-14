@@ -1,19 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+.main {
+  width: 100%;
+  height: 100vh;
+}
 header {
   .header {
     .header-nav {
+      font: 14px/27px "Roboto", "RobotoDraft", Arial, sans-serif;
+      padding: 15px 13px;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.87);
+      }
+
       .profile-image {
-        height: 35px;
+        height: 32px;
+        border-radius: 50%;
       }
       .menu {
-        height: 35px;
-        width: 35px;
+        height: 24px;
+        width: 24px;
+        opacity: 0.75;
+      }
+      * {
+        margin: 0px 10px;
       }
     }
   }
