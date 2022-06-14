@@ -44,7 +44,7 @@ const MainComponent = () => {
                 setText(e.target.value);
               }}
               onKeyPress={(e) => {
-                if (e.key === "Enter" && text) {
+                if (e.key === "Enter" && text && text !== "#") {
                   navigate("/result");
                   dispatch(asyncThunk(text));
                   localStorage.setItem("data", text);

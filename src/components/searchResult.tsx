@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
-
+import "../styles/result.scss";
 import { asyncThunk } from "../state/fetcher";
 type result = {
   fetcher: {
@@ -64,7 +64,7 @@ const SearchResult = () => {
                 setText(e.target.value);
               }}
               onKeyPress={(e) => {
-                if (e.key === "Enter" && text) {
+                if (e.key === "Enter" && text && text !== "#") {
                   navigate("/result");
                   dispatch(asyncThunk(text));
                   localStorage.setItem("data", text);
