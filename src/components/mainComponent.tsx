@@ -84,6 +84,9 @@ const MainComponent = () => {
           {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
           <a href="#">Omadingizni sinang</a>
         </div>
+        <div>
+          <p>Google xizmatlari quyidagi tillarda taqdim etiladi:</p>
+        </div>
       </div>
     </main>
   );
