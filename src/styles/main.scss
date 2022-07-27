@@ -63,3 +63,14 @@ main {
     }
   }
 }
+@media (max-width: 586px) {
+  .input-container-main {
+    width: 100% !important;
+    .input-container {
+      .input {
+        width: 95% !important;
+        margin: auto;
+      }
+    }
+  }
+}
