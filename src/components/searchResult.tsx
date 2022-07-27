@@ -72,7 +72,7 @@ const SearchResult = () => {
               }}
             />
             <div className="clear-div">{text ? clear() : undefined}</div>
-            {/*eslint-disable-next-line jsx-a11y/alt-text*/}
+
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAALCAYAAACd1bY6AAAABHNCSVQICAgIfAhkiAAAAE5JREFUKJHtkDEKwDAMAy+hg/7sJeBPa0unQslSSDz2FmFjJOGWmdM2p0iiVxgB2KY/wxjjSAFaRMySavA32+BaF++kL9bb2p9JKjGSxA09hjxcPLr8lgAAAABJRU5ErkJggg==" />
             <svg
               className="voice"

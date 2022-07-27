@@ -1,0 +1,15 @@
+// {
+//   "rules": {
+//     "no-unused-vars": [
+//       "warn",
+//       {
+//         "argsIgnorePattern": "^_",
+//         "varsIgnorePattern": "^_"
+//       }
+//     ]
+//   },
+//   "root": true
+// }
+{
+  "root": true
+}
